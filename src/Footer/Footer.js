@@ -118,7 +118,7 @@ const Footer = () => {
 
           <div className="footer__info">
             <FaPhone />
-            <span>+91 00000 00000</span>
+            <span>+91 9958424916</span>
           </div>
 
           <div className="footer__info">

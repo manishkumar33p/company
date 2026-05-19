@@ -31,7 +31,7 @@ const CompanyOverview = () => {
               NISS Software Solutions
             </span>
 
-            <h1>
+            <h1 className="hero-overview">
               Transforming Businesses Through
               <span> Smart Digital Solutions</span>
             </h1>
