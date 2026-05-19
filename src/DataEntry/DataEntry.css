@@ -264,3 +264,292 @@
     border-radius: 5px;
     margin-top: 15px;
 }
+
+
+
+
+
+
+/* =========================
+   DATA ENTRY PAGE
+========================= */
+
+.data-entry-page{
+    min-height: 100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.75),
+    rgba(0,0,0,0.75)),
+    url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    padding-top: 120px;
+    color: white;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.data-entry-page .container{
+    width: 95%;
+    max-width: 1500px;
+    margin: auto;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.data-entry-page .page-title{
+    text-align: center;
+    font-size: 48px;
+    font-weight: 800;
+
+    margin-bottom: 35px;
+
+    color: #ffffff;
+}
+
+.data-entry-page .page-title::after{
+    content: "";
+    display: block;
+
+    width: 120px;
+    height: 5px;
+
+    background: #00bfff;
+
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.data-entry-page .table{
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+
+    border-radius: 20px;
+}
+
+/* TABLE HEAD */
+
+.data-entry-page .table thead{
+    background: rgba(0,191,255,0.25);
+}
+
+.data-entry-page .table th{
+    padding: 18px;
+    text-align: center;
+
+    color: #4d4848;
+    font-size: 16px;
+    font-weight: 700;
+
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+/* TABLE BODY */
+
+.data-entry-page .table td{
+    padding: 15px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+.data-entry-page .form-control{
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border: none;
+    outline: none;
+
+    border-radius: 12px;
+
+    background: rgba(255,255,255,0.12);
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.data-entry-page .form-control:focus{
+    background: rgba(255,255,255,0.18);
+
+    box-shadow:
+    0 0 0 3px rgba(0,191,255,0.4);
+}
+
+/* Placeholder */
+
+.data-entry-page .form-control::placeholder{
+    color: #ddd;
+}
+
+/* Select */
+
+.data-entry-page select.form-control{
+    cursor: pointer;
+}
+
+/* =========================
+   BUTTON GROUP
+========================= */
+
+.data-entry-page .button-group{
+    margin-top: 30px;
+
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+/* COMMON BUTTON */
+
+.data-entry-page .btn{
+    border: none;
+    outline: none;
+
+    padding: 14px 28px;
+
+    border-radius: 14px;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* PRIMARY */
+
+.data-entry-page .btn-primary{
+    background: #007bff;
+    color: white;
+}
+
+.data-entry-page .btn-primary:hover{
+    background: #0062cc;
+    transform: translateY(-3px);
+}
+
+/* SUCCESS */
+
+.data-entry-page .btn-success{
+    background: #28a745;
+    color: white;
+}
+
+.data-entry-page .btn-success:hover{
+    background: #1f8a39;
+    transform: translateY(-3px);
+}
+
+/* INFO */
+
+.data-entry-page .btn-info{
+    background: #17a2b8;
+    color: white;
+}
+
+.data-entry-page .btn-info:hover{
+    background: #11707f;
+    transform: translateY(-3px);
+}
+
+/* DANGER */
+
+.data-entry-page .btn-danger{
+    background: #dc3545;
+    color: white;
+
+    padding: 10px 18px;
+}
+
+.data-entry-page .btn-danger:hover{
+    background: #b52a37;
+}
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.data-entry-page .alert-success{
+    margin-top: 30px;
+
+    background: rgba(40,167,69,0.2);
+
+    border: 1px solid rgba(40,167,69,0.5);
+
+    padding: 18px;
+
+    border-radius: 14px;
+
+    color: #7dffb0;
+
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1200px){
+
+    .data-entry-page .container{
+        overflow-x: auto;
+    }
+
+    .data-entry-page .table{
+        min-width: 1200px;
+    }
+}
+
+@media(max-width:768px){
+
+    .data-entry-page{
+        padding-top: 90px;
+    }
+
+    .data-entry-page .container{
+        padding: 20px;
+    }
+
+    .data-entry-page .page-title{
+        font-size: 32px;
+    }
+
+    .data-entry-page .button-group{
+        flex-direction: column;
+    }
+
+    .data-entry-page .btn{
+        width: 100%;
+    }
+}

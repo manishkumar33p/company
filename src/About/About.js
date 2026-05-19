@@ -1,168 +1,263 @@
-// import React from 'react';
-// import NavBar from '../Navbar/Navbar';
-// import './About.css'
+import React from "react";
+import "./About.css";
 
-// const About = () => {
-//     return (
-//         <div className='App'>
-//         <div className="container mt-5">
-//             <NavBar></NavBar>
-            
-
-//                 {/* Company Mission and Vision */}
-//                 <div className="company-mission">
-//                     <h2>Our Mission</h2>
-//                     <p>At NISS Pvt Ltd, our mission is to deliver high-quality web development solutions that empower businesses to succeed online. We are committed to innovation, excellence, and customer satisfaction in every project we undertake.</p>
-//                     <h2>Our Vision</h2>
-//                     <p>We envision a digital world where businesses of all sizes can thrive through custom web solutions that are both functional and aesthetically pleasing. Our goal is to be a leading provider of web development services, known for our creativity and technical expertise.</p>
-//                 </div>
-
-//                 {/* Company History */}
-//                 <div className="company-history">
-//                     <h2>Our Journey</h2>
-//                     <p>Founded in September 2024 by Manish Kumar Singh, NISS Pvt Ltd started with a vision to bridge the gap between businesses and their online presence. Since then, we have grown into a trusted partner for companies seeking innovative web solutions.</p>
-//                     <ul>
-//                         <li><strong>2024:</strong> Company established and first projects launched.</li>
-//                         <li><strong>2025:</strong> Expanded services to include dynamic web applications.</li>
-//                         <li><strong>2026:</strong> Achieved milestone of 100 completed projects.</li>
-//                     </ul>
-//                 </div>
-
-//                 {/* Team Introduction */}
-//                 <div className="team-introduction">
-//                     <h2>Meet Our Team</h2>
-//                     <div className="team-member">
-//                         <h3>Manish Kumar Singh - Founder & CEO</h3>
-//                         <p>With over a decade of experience in web development, Manish leads the team with a focus on innovation and client satisfaction. His leadership ensures that NISS Pvt Ltd remains at the forefront of web technology.</p>
-//                     </div>
-//                     <div className="team-member">
-//                         <h3>Jane Doe - Lead Developer</h3>
-//                         <p>Jane is an expert in both front-end and back-end development, bringing a wealth of experience to every project. Her attention to detail and technical skills are crucial to our success.</p>
-//                     </div>
-//                     <div className="team-member">
-//                         <h3>John Smith - UX/UI Designer</h3>
-//                         <p>John specializes in creating user-friendly and visually appealing designs. His work ensures that our websites are not only functional but also engaging for users.</p>
-//                     </div>
-//                 </div>
-
-//                 {/* Client Testimonials */}
-//                 <div className="client-testimonials">
-//                     <h2>What Our Clients Say</h2>
-//                     <div className="testimonial">
-//                         <p>"NISS Pvt Ltd transformed our online presence with a stunning website. Their team was professional and delivered beyond our expectations." - Client A</p>
-//                     </div>
-//                     <div className="testimonial">
-//                         <p>"Exceptional service and innovative solutions. We highly recommend NISS Pvt Ltd for any web development needs." - Client B</p>
-//                     </div>
-//                 </div>
-
-//                 {/* Company Culture and Values */}
-//                 <div className="company-culture">
-//                     <h2>Our Culture and Values</h2>
-//                     <p>At NISS Pvt Ltd, we foster a collaborative and inclusive work environment where creativity and technical expertise thrive. Our values include:</p>
-//                     <ul>
-//                         <li><strong>Integrity:</strong> We conduct our business with honesty and transparency.</li>
-//                         <li><strong>Innovation:</strong> We embrace new technologies and ideas to provide the best solutions.</li>
-//                         <li><strong>Customer-Centricity:</strong> We prioritize our clients’ needs and work to exceed their expectations.</li>
-//                         <li><strong>Excellence:</strong> We strive for the highest standards in all aspects of our work.</li>
-//                     </ul>
-//                 </div>
-
-//                 {/* Call to Action */}
-//                 <div className="call-to-action">
-//                     <h2>Get in Touch</h2>
-//                     <p>If you're interested in learning more about our services or have any questions, feel free to contact us. We would love to help you achieve your web development goals!</p>
-//                     <a href="/contact-us" className="btn btn-primary">Contact Us</a>
-//                 </div>
-//             </div>
-//         </div>
-    
-//     );
-// };
-
-// export default About;
-
-import React from 'react';
-import NavBar from '../Navbar/Navbar';
-import './About.css';
+import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-import Manish from "../Manish.jpeg"
+import Chatboat from "../Chatboat/Chatboat";
+import MarvVideo2 from "../marvv3.mp4";
+import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
+
+import Software from "../Software.jfif";
+
+/* TEAM PHOTOS */
+import CEO from "../Manish.jpeg";
+import CFO from "../N.jpeg";
+
+const services = [
+  "Website Development",
+  "App Development",
+  "SEO Optimization",
+  "Google Ads",
+  "YouTube Ads",
+  "Social Media Marketing",
+  "Graphic Designing",
+  "Branding",
+  "E-Commerce Setup",
+  "Business Automation",
+];
 
 const About = () => {
-    return (
-        <div className='App'>
-            <div className="container mt-5">
-                <NavBar />
+  return (
+    <div className="home-container">
 
-                {/* Company Mission and Vision */}
-                <div className="company-mission">
-                    <h2>Our Mission</h2>
-                    <p>At NISS Pvt Ltd, our mission is to deliver high-quality web development solutions that empower businesses to succeed online. We are committed to innovation, excellence, and customer satisfaction in every project we undertake.</p>
-                    <h2>Our Vision</h2>
-                    <p>We envision a digital world where businesses of all sizes can thrive through custom web solutions that are both functional and aesthetically pleasing. Our goal is to be a leading provider of web development services, known for our creativity and technical expertise.</p>
-                </div>
+      <Navbar />
 
-                {/* Company History */}
-                <div className="company-history">
-                    <h2>Our Journey</h2>
-                    <p>Founded in September 2024 by Manish Kumar Singh, NISS Pvt Ltd started with a vision to bridge the gap between businesses and their online presence. Since then, we have grown into a trusted partner for companies seeking innovative web solutions.</p>
-                    <ul>
-                        <li><strong>2022:</strong> Company established and first projects launched.</li>
-                        <li><strong>2023:</strong> Expanded services to include dynamic web applications.</li>
-                        <li><strong>2024:</strong> Achieved milestone of 100 completed projects.</li>
-                    </ul>
-                </div>
+      {/* HERO SECTION */}
 
-                {/* Team Introduction */}
-                <div className="team-introduction">
-                    <h2>Meet Our Team</h2>
-                    <div className="team-member">
-                        <h3>Manish Kumar Singh - Founder & CEO</h3>
-                        <img src={Manish}  className="img1" />
-                        <p>With over a decade of experience in web development, Manish leads the team with a focus on innovation and client satisfaction. His leadership ensures that NISS Pvt Ltd remains at the forefront of web technology.</p>
-                    </div>
-                    <div className="team-member">
-                        <h3>Jane Doe - Lead Developer</h3>
-                        <p>Jane is an expert in both front-end and back-end development, bringing a wealth of experience to every project. Her attention to detail and technical skills are crucial to our success.</p>
-                    </div>
-                    <div className="team-member">
-                        <h3>John Smith - UX/UI Designer</h3>
-                        <p>John specializes in creating user-friendly and visually appealing designs. His work ensures that our websites are not only functional but also engaging for users.</p>
-                    </div>
-                </div>
+      <section className="hero-section">
 
-                {/* Client Testimonials */}
-                <div className="client-testimonials">
-                    <h2>What Our Clients Say</h2>
-                    <div className="testimonial">
-                        <p>"NISS Pvt Ltd transformed our online presence with a stunning website. Their team was professional and delivered beyond our expectations." - Client A</p>
-                    </div>
-                    <div className="testimonial">
-                        <p>"Exceptional service and innovative solutions. We highly recommend NISS Pvt Ltd for any web development needs." - Client B</p>
-                    </div>
-                </div>
+        <video className="hero-video" autoPlay loop muted>
+          <source src={MarvVideo2} type="video/mp4" />
+        </video>
 
-                {/* Company Culture and Values */}
-                <div className="company-culture">
-                    <h2>Our Culture and Values</h2>
-                    <p>At NISS Pvt Ltd, we foster a collaborative and inclusive work environment where creativity and technical expertise thrive. Our values include:</p>
-                    <ul>
-                        <li><strong>Integrity:</strong> We conduct our business with honesty and transparency.</li>
-                        <li><strong>Innovation:</strong> We embrace new technologies and ideas to provide the best solutions.</li>
-                        <li><strong>Customer-Centricity:</strong> We prioritize our clients’ needs and work to exceed their expectations.</li>
-                        <li><strong>Excellence:</strong> We strive for the highest standards in all aspects of our work.</li>
-                    </ul>
-                </div>
+        <div className="hero-overlay"></div>
 
-                {/* Call to Action */}
-                <div className="call-to-action">
-                    <h2>Get in Touch</h2>
-                    <p>If you're interested in learning more about our services or have any questions, feel free to contact us. We would love to help you achieve your web development goals!</p>
-                    <a href="/contact-us" className="btn btn-primary">Contact Us</a>
-                </div>
-            </div><Footer></Footer>
+        <div className="hero-content">
+
+          <div className="hero-left">
+
+            <span className="hero-tag">
+              NISS Software Solutions
+            </span>
+
+            <h1 className="hero-head">
+              Smart Digital Solutions
+              For <span>Modern Businesses</span>
+            </h1>
+
+            <p>
+              We build modern websites, mobile apps,
+              marketing systems, automation platforms,
+              branding solutions, and business software
+              for startups and enterprises.
+            </p>
+
+            <div className="hero-buttons">
+
+              <button>
+                Get Started
+              </button>
+
+              <button className="secondary-btn">
+                Explore Services
+              </button>
+
+            </div>
+
+          </div>
+
+          <div className="hero-right">
+
+            <div className="hero-image-card">
+              <img src={Software} alt="NISS" />
+            </div>
+
+          </div>
+
         </div>
-    );
+
+      </section>
+
+      {/* SERVICES */}
+
+      <section className="services-section">
+
+        <div className="section-heading">
+
+          <span>Our Services</span>
+
+          <h2>
+            Complete Digital Growth Solutions
+          </h2>
+
+          <p>
+            Premium business solutions designed
+            to grow your brand digitally.
+          </p>
+
+        </div>
+
+        <div className="services-grid">
+
+          {services.map((service, index) => (
+
+            <div className="service-card" key={index}>
+
+              <h3>{service}</h3>
+
+              <p>
+                Professional and scalable solutions
+                customized for your business growth.
+              </p>
+
+            </div>
+
+          ))}
+
+        </div>
+
+      </section>
+
+      {/* ABOUT */}
+
+      <section className="about-section">
+
+        <div className="about-left">
+
+          <img src={Software} alt="About NISS" />
+
+        </div>
+
+        <div className="about-right">
+
+          <span>About Company</span>
+
+          <h2>
+            Transforming Businesses Through
+            Technology & Innovation
+          </h2>
+
+          <p>
+            NISS Software Solutions helps businesses
+            build strong online presence through
+            modern websites, digital marketing,
+            automation systems, and branding solutions.
+          </p>
+
+          <div className="about-stats">
+
+            <div>
+              <h3>100+</h3>
+              <p>Projects</p>
+            </div>
+
+            <div>
+              <h3>50+</h3>
+              <p>Clients</p>
+            </div>
+
+            <div>
+              <h3>99%</h3>
+              <p>Satisfaction</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* LEADERSHIP */}
+
+      <section className="team-section">
+
+        <div className="section-heading">
+
+          <span>Leadership Team</span>
+
+          <h2>
+            Meet Our Leadership
+          </h2>
+
+        </div>
+
+        <div className="team-grid">
+
+          {/* CEO */}
+
+          <div className="team-card">
+
+            <img src={CEO} alt="CEO" />
+
+            <h3>
+              Manish Kumar Singh
+            </h3>
+
+            <span>Chief Executive Officer (CEO)</span>
+
+            <p>
+              Leading innovation, growth strategy,
+              and digital transformation at NISS.
+            </p>
+
+          </div>
+
+          {/* CFO */}
+
+          <div className="team-card">
+
+            <img src={CFO} alt="CFO" />
+
+            <h3>
+              KR Roushan
+            </h3>
+
+            <span>Chief Financial Officer (CFO)</span>
+
+            <p>
+              Managing business operations,
+              finance strategy, and company growth.
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* CTA */}
+
+      <section className="cta-section">
+
+        <h2>
+          Ready To Grow Your Business?
+        </h2>
+
+        <p>
+          Let’s build something powerful together.
+        </p>
+
+        <button>
+          Contact Us
+        </button>
+
+      </section>
+
+      <Footer />
+  <Chatboat /> 
+    <WhatsAppButton />
+    </div>
+  );
 };
 
 export default About;

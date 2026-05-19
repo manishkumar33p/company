@@ -1,199 +1,593 @@
-/* About.css */
+/* MAIN CONTAINER */
 
-/* .about-page {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa; 
-    color: #333; 
+.home-container{
+  width: 100%;
+  overflow: hidden;
+  background: #f5f7fb;
+  font-family: "Poppins", sans-serif;
 }
 
+/* HERO SECTION */
 
+.hero-section{
+  position: relative;
 
-.page-title {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* VIDEO */
+
+.hero-video{
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 1;
+}
+
+/* OVERLAY */
+
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    rgba(0,0,0,0.78),
+    rgba(0,0,0,0.72)
+  );
+
+  z-index: 2;
+}
+
+/* HERO CONTENT */
+
+.hero-content{
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  max-width: 1450px;
+
+  padding: 120px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 70px;
+}
+
+/* LEFT SIDE */
+
+.hero-left{
+  flex: 1;
+  color: white;
+}
+
+.hero-tag{
+  display: inline-block;
+
+  padding: 12px 24px;
+
+  border-radius: 40px;
+
+  background: rgba(255,255,255,0.12);
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(10px);
+
+  margin-bottom: 28px;
+
+  font-size: 14px;
+  letter-spacing: 1px;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.hero-left h1{
+  font-size: 72px;
+
+  line-height: 1.15;
+
+  margin-bottom: 28px;
+
+  font-weight: 700;
+}
+
+.hero-left h1 span{
+  color: #4a90e2;
+}
+
+.hero-left p{
+  font-size: 18px;
+
+  line-height: 1.9;
+
+  color: rgba(255,255,255,0.82);
+
+  max-width: 720px;
+
+  margin-bottom: 40px;
+}
+
+/* BUTTONS */
+
+.hero-buttons{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-buttons button{
+  padding: 16px 34px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.35s ease;
+}
+
+.hero-buttons button:first-child{
+  background: linear-gradient(45deg,#4a90e2,#2f78cc);
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(74,144,226,0.35);
+}
+
+.hero-buttons button:first-child:hover{
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 35px rgba(74,144,226,0.45);
+}
+
+.secondary-btn{
+  background: rgba(255,255,255,0.08);
+
+  color: white;
+
+  border: 1px solid rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(10px);
+}
+
+.secondary-btn:hover{
+  background: rgba(255,255,255,0.18);
+}
+
+/* RIGHT SIDE */
+
+.hero-right{
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-card{
+  width: 100%;
+  max-width: 520px;
+
+  border-radius: 35px;
+
+  overflow: hidden;
+
+  position: relative;
+
+  box-shadow: 0 25px 60px rgba(0,0,0,0.4);
+}
+
+.hero-image-card img{
+  width: 100%;
+  display: block;
+
+  transition: 0.5s ease;
+}
+
+.hero-image-card:hover img{
+  transform: scale(1.05);
+}
+
+/* SECTION COMMON */
+
+.section-heading{
+  text-align: center;
+
+  margin-bottom: 70px;
+}
+
+.section-heading span{
+  display: inline-block;
+
+  padding: 10px 22px;
+
+  background: #4a90e2;
+
+  color: white;
+
+  border-radius: 40px;
+
+  margin-bottom: 25px;
+
+  font-size: 14px;
+}
+
+.section-heading h2{
+  font-size: 56px;
+
+  color: #111;
+
+  margin-bottom: 20px;
+}
+
+.section-heading p{
+  color: #666;
+
+  font-size: 18px;
+
+  line-height: 1.8;
+}
+
+/* SERVICES */
+
+.services-section{
+  padding: 110px 50px;
+
+  background:
+  linear-gradient(
+    rgba(245,247,252,0.95),
+    rgba(245,247,252,0.95)
+  ),
+
+  url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1600&auto=format&fit=crop");
+
+  background-size: cover;
+}
+
+/* GRID */
+
+.services-grid{
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+
+  gap: 35px;
+
+  max-width: 1400px;
+
+  margin: auto;
+}
+
+/* CARD */
+
+.service-card{
+  background: rgba(255,255,255,0.82);
+
+  backdrop-filter: blur(12px);
+
+  padding: 40px;
+
+  border-radius: 30px;
+
+  transition: 0.4s ease;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  border: 1px solid rgba(255,255,255,0.4);
+}
+
+.service-card:hover{
+  transform: translateY(-10px);
+
+  box-shadow: 0 22px 45px rgba(0,0,0,0.15);
+}
+
+.service-card h3{
+  font-size: 30px;
+
+  margin-bottom: 18px;
+
+  color: #111;
+}
+
+.service-card p{
+  line-height: 1.9;
+
+  color: #555;
+}
+
+/* ABOUT */
+
+.about-section{
+  padding: 110px 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 70px;
+
+  max-width: 1450px;
+
+  margin: auto;
+}
+
+.about-left{
+  flex: 1;
+}
+
+.about-left img{
+  width: 100%;
+
+  border-radius: 35px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.about-right{
+  flex: 1;
+}
+
+.about-right span{
+  display: inline-block;
+
+  padding: 10px 22px;
+
+  border-radius: 40px;
+
+  background: #4a90e2;
+
+  color: white;
+
+  margin-bottom: 25px;
+}
+
+.about-right h2{
+  font-size: 56px;
+
+  line-height: 1.2;
+
+  margin-bottom: 25px;
+
+  color: #111;
+}
+
+.about-right p{
+  line-height: 1.9;
+
+  color: #666;
+
+  margin-bottom: 40px;
+
+  font-size: 18px;
+}
+
+/* STATS */
+
+.about-stats{
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-stats div{
+  background: white;
+
+  padding: 25px 35px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.about-stats h3{
+  font-size: 38px;
+
+  color: #4a90e2;
+
+  margin-bottom: 10px;
+}
+
+/* TEAM */
+
+.team-section{
+  padding: 110px 50px;
+
+  background: #f9fbff;
+}
+
+.team-grid{
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+
+  gap: 40px;
+
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+/* TEAM CARD */
+
+.team-card{
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 35px;
+
+  text-align: center;
+
+  transition: 0.4s ease;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.team-card:hover{
+  transform: translateY(-10px);
+}
+
+.team-card img{
+  width: 170px;
+  height: 170px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  margin-bottom: 25px;
+
+  border: 5px solid #4a90e2;
+}
+
+.team-card h3{
+  font-size: 30px;
+
+  margin-bottom: 10px;
+
+  color: #111;
+}
+
+.team-card span{
+  color: #4a90e2;
+
+  font-weight: 600;
+
+  display: block;
+
+  margin-bottom: 20px;
+}
+
+.team-card p{
+  color: #666;
+
+  line-height: 1.8;
+}
+
+/* CTA */
+
+.cta-section{
+  padding: 120px 40px;
+
+  text-align: center;
+
+  background:
+  linear-gradient(
+    rgba(0,0,0,0.75),
+    rgba(0,0,0,0.75)
+  ),
+
+  url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop");
+
+  background-size: cover;
+  background-position: center;
+
+  color: white;
+}
+
+.cta-section h2{
+  font-size: 60px;
+
+  margin-bottom: 25px;
+}
+
+.cta-section p{
+  font-size: 20px;
+
+  margin-bottom: 40px;
+
+  color: rgba(255,255,255,0.82);
+}
+
+.cta-section button{
+  padding: 18px 40px;
+
+  border: none;
+
+  border-radius: 18px;
+
+  background: linear-gradient(45deg,#4a90e2,#2f78cc);
+
+  color: white;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.35s ease;
+}
+
+.cta-section button:hover{
+  transform: translateY(-5px);
+
+  box-shadow: 0 18px 35px rgba(74,144,226,0.4);
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 992px){
+
+  .hero-content,
+  .about-section{
+    flex-direction: column;
+
     text-align: center;
-    color: #333;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-
-.company-mission, .company-history, .team-introduction, .client-testimonials, .company-culture, .call-to-action {
-    margin-bottom: 40px;
-}
-
-.company-mission h2, .company-history h2, .team-introduction h2, .client-testimonials h2, .company-culture h2, .call-to-action h2 {
-    font-size: 2rem;
-    color: #000;
-}
-
-.company-mission p, .company-history p, .team-introduction p, .client-testimonials p, .company-culture p, .call-to-action p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-.company-history ul, .company-culture ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-.company-history li, .company-culture li {
-    font-size: 1.1rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-
-.team-introduction .team-member {
-    margin-bottom: 20px;
-}
-
-.team-introduction h3 {
-    font-size: 1.5rem;
-    color: #000;
-}
-
-.team-introduction p {
-    font-size: 1.1rem;
-    color: #666;
-}
-
-
-.client-testimonials .testimonial {
-    border-left: 3px solid #007bff; 
-    padding-left: 15px;
-    margin-bottom: 20px;
-}
-
-.client-testimonials p {
-    font-size: 1.1rem;
-    color: #333;
-}
-
-
-.call-to-action h2 {
-    font-size: 2rem;
-    color: #000;
-}
-
-.call-to-action p {
-    font-size: 1.1rem;
-    color: #666;
-}
-
-.call-to-action .btn {
-    background-color: #007bff; 
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.call-to-action .btn:hover {
-    background-color: #0056b3; 
-} */
-
-/* About.css */
-.App {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    padding-top: 60px; 
-   
   }
-  
-  /* .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  } */
-  
-  h2 {
-    color: #333;
-    font-size: 2rem;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+
+  .hero-left h1,
+  .about-right h2{
+    font-size: 46px;
   }
-  
-  h3 {
-    color: #555;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+
+  .hero-buttons{
+    justify-content: center;
   }
-  
-  p {
-    color: #666;
-    line-height: 1.6;
-    margin-bottom: 20px;
+
+}
+
+@media screen and (max-width: 768px){
+
+  .hero-content,
+  .services-section,
+  .about-section,
+  .team-section{
+    padding: 80px 20px;
   }
-  
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
+
+  .hero-left h1,
+  .about-right h2,
+  .section-heading h2,
+  .cta-section h2{
+    font-size: 34px;
   }
-  
-  li {
-    margin-bottom: 10px;
+
+  .hero-left p,
+  .about-right p{
+    font-size: 16px;
   }
-  
-  .company-mission, .company-history, .team-introduction, .client-testimonials, .company-culture, .call-to-action {
-    background-color: #fff;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .team-member {
-    margin-bottom: 20px;
-  }
-  
-  .client-testimonials .testimonial {
-    background-color: #f1f1f1;
-    border-left: 5px solid #007bff;
-    padding: 15px;
-    margin-bottom: 15px;
-    border-radius: 4px;
-  }
-  
-  .call-to-action {
-    text-align: center;
-  }
-  
-  .call-to-action .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  .call-to-action .btn:hover {
-    background-color: #0056b3;
-  }
-  
-  @media (max-width: 768px) {
-    .container {
-      padding: 10px;
-    }
-  
-    h2 {
-      font-size: 1.5rem;
-    }
-  
-    h3 {
-      font-size: 1.25rem;
-    }
-  
-    .call-to-action .btn {
-      font-size: 0.875rem;
-      padding: 8px 16px;
-    }
-   .img1{
-        height:1.5em;
-        width: 1em;
-    }
-  }
-  
+
+}
+
+
+.hero-head{
+  color: #f5f7fb;
+}
