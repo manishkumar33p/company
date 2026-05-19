@@ -10,12 +10,11 @@ import Dashboard from "./Dashboard/Dashboard";
 import Login from "./Login/Login";
 import Services from "./Services/Services";
 import CompanyOverview from "./CompanyOverview/CompanyOverview";
-
 import Cart from "./Cart/Cart";
 import Checkout from "./Checkout/Checkout";
 import PaymentGateway from "./PaymentGateway/PaymentGateway";
 
-// Components (agar pages ke alawa use ho rahe hain)
+// Components
 import NavBar from "./Navbar/Navbar";
 import Footer from "./Footer/Footer";
 import Chatboat from "./Chatboat/Chatboat";
@@ -24,9 +23,12 @@ import WhatsAppButton from "./WhatsAppButton/WhatsAppButton";
 function App() {
   return (
     <Router>
-      <Routes>
 
-        {/* MAIN PAGES */}
+      {/* COMMON LAYOUT (MOST IMPORTANT FIX) */}
+      <NavBar />
+      <WhatsAppButton />
+
+      <Routes>
         <Route path="/" element={<About />} />
         <Route path="/packages" element={<Packages />} />
         <Route path="/data-entry" element={<DataEntry />} />
@@ -35,22 +37,14 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/services" element={<Services />} />
         <Route path="/overview" element={<CompanyOverview />} />
-
-        {/* ECOMMERCE */}
-        
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/paymentgateway" element={<PaymentGateway />} />
-
-        {/* EXTRA UTIL PAGES (optional) */}
         <Route path="/chatboat" element={<Chatboat />} />
-        <Route path="/whatsapp" element={<WhatsAppButton />} />
-
-        {/* NAVBAR / FOOTER (normally routes nahi hote, but optional) */}
-        <Route path="/navbar" element={<NavBar />} />
-        <Route path="/footer" element={<Footer />} />
-
       </Routes>
+
+      <Footer />
+
     </Router>
   );
 }
