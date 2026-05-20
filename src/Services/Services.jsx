@@ -4,7 +4,7 @@ import "./Services.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-import MarvVideo2 from "../marvv3.mp4";
+import Niss72 from "../niss72.mp4";
 import Software from "../Software.jfif";
 
 const services = [
@@ -90,7 +90,7 @@ const Services = () => {
       <section className="services-hero">
 
         <video className="services-video" autoPlay loop muted>
-          <source src={MarvVideo2} type="video/mp4" />
+          <source src={Niss72} type="video/mp4" />
         </video>
 
         <div className="services-overlay"></div>

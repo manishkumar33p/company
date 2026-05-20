@@ -151,7 +151,7 @@ import Footer from "../Footer/Footer";
 import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
-import MarvVideo from "../marvv3.mp4";
+import Niss71 from "../niss71.mp4";
 
 const ContactUs = () => {
 
@@ -225,7 +225,7 @@ const ContactUs = () => {
             <NavBar />
 
             <video className="contact-video" autoPlay loop muted>
-                <source src={MarvVideo} type="video/mp4" />
+                <source src={Niss71} type="video/mp4" />
             </video>
 
             <div className="contact-overlay"></div>

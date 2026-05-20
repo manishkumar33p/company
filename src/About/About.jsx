@@ -186,7 +186,7 @@ import "./About.css";
 
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
-
+import { useNavigate } from "react-router-dom";
 import Chatboat from "../Chatboat/Chatboat";
 import WhatsAppButton from "../WhatsAppButton/WhatsAppButton";
 
@@ -203,9 +203,9 @@ import {
   FaLaptopCode,
 } from "react-icons/fa";
 
-import MarvVideo2 from "../marvv3.mp4";
+// import MarvVideo2 from "../marvv3.mp4";
 import Software from "../Software.jfif";
-
+import Niss73 from "../niss73.mp4";
 import CEO from "../Manish.jpeg";
 import CFO from "../N.jpeg";
 
@@ -270,7 +270,7 @@ const About = () => {
       {/* HERO SECTION */}
       <section className="hero-section">
         <video className="hero-video" autoPlay loop muted>
-          <source src={MarvVideo2} type="video/mp4" />
+          <source src={Niss73} type="video/mp4" />
         </video>
 
         <div className="hero-overlay"></div>

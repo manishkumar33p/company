@@ -4,7 +4,7 @@ import "./CompanyOverview.css";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 
-import MarvVideo2 from "../marvv3.mp4";
+import Niss70 from "../niss70.mp4";
 import Software from "../Software.jfif";
 
 const CompanyOverview = () => {
@@ -18,7 +18,7 @@ const CompanyOverview = () => {
       <section className="company-hero">
 
         <video className="company-video" autoPlay loop muted>
-          <source src={MarvVideo2} type="video/mp4" />
+          <source src={Niss70} type="video/mp4" />
         </video>
 
         <div className="company-overlay"></div>

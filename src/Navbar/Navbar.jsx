@@ -436,7 +436,7 @@ const Navbar = () => {
           onClick={closeMenuOnMobile}
         >
           <img src={logo1} alt="logo" className="nav__logo-img" />
-          NISS Software Solutions
+          Brand Nova Digital Orbit
         </NavLink>
 
         {/* MENU */}
